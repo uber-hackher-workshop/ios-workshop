@@ -22,6 +22,8 @@ Only 1 of your team members will need to fork this repository. Everyone else can
 **Expected Result:** A team member can now make changes to your repository.
 
 # Overview
+![Sample App](https://github.com/uber-hackher-workshop/ios-workshop/blob/main/ios-sample-app.gif "Final Demo")
+
 The app follows the following architecture:
 
 
