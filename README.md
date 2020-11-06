@@ -21,6 +21,13 @@ Only 1 of your team members will need to fork this repository. Everyone else can
 
 **Expected Result:** A team member can now make changes to your repository.
 
+# Setup
+Xcode 12 Download Link: https://developer.apple.com/xcode/
+
+Swift 5.3 (comes with Xcode 12)
+
+Apple Computer (Xcode only runs on Apple)
+
 # Overview
 <img src="ios-sample-app.gif" alt="sample App" width="350"/>
 
