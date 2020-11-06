@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  NavigationDemo
+//  NewsAppDemo
 //
-//  Created by Flannery Jefferson on 2020-10-09.
+//  Created by Flannery Jefferson on 2020-11-06.
 //  Copyright © 2020 Flannery Jefferson. All rights reserved.
 //
 
