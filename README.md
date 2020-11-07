@@ -55,8 +55,9 @@ Here we have all our the various view controllers / screens and views that we wa
 
 Storyboards only contain navigation, layout and style information - but they are completely static. In order to load data into your views that is dynamic, like a feed of news articles, you need to attach certain views to a custom View Controller class that can handle this logic. 
 
-You can connect a storyboard view controller to a custom class by opening the Inspector panel while the controller is selected, tapping the Identity Inspector icon, and adding the name of your custom controller class to the `Class` field. ![Screen Shot 2020-11-07 at 9 14 56 AM](https://user-images.githubusercontent.com/7647185/98443526-cfba0980-20d9-11eb-8cb4-cf61577377cb.png)
+You can connect a storyboard view controller to a custom class by opening the Inspector panel while the controller is selected, tapping the Identity Inspector icon, and adding the name of your custom controller class to the `Class` field. 
 
+![Screen Shot 2020-11-07 at 9 14 56 AM](https://user-images.githubusercontent.com/7647185/98443526-cfba0980-20d9-11eb-8cb4-cf61577377cb.png)
 
 ## Controllers
 
