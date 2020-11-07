@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+/*
+ We'll use this view to set the gradient background for our Search screen.
+ The `@IBDesignable` annotation means that we can add properties to this class that will
+ show up in the Storyboard Inspector when we tap on a view that uses this class.
+ */
 
 @IBDesignable
 class GradientView: UIView {
@@ -47,5 +52,4 @@ class GradientView: UIView {
         layer.endPoint = CGPoint (x: 0.5, y: 1)
      }
     }
-    
 }
