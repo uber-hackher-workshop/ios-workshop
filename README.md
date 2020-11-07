@@ -104,6 +104,33 @@ An important detail of how Table Views work on iOS is that they reuse cells. As 
 This makes loading images into a cell from a URL a bit trickier. We don't want to have to re-fetch the image every time the user scrolls down and the cell temporarily leaves the screen. This is why we've created a simple ImageCache class, that can store images we've already downloaded. Whenever a cell is about to load an image from a URL, it can first check if that image is already loaded in the ImageCache class. If so, it can avoid making an unnecessary url request. 
 
 
+## Fonts
+This folder stores the custom font .ttf files we want to use in our app. These files can be dragged and dropped into your project (make sure you check 'Add to target NewsAppDemo in the dialog that pops up when you drop the files). The `Additional Resources` section has more information about how you can use these fonts in your storyboard views. 
+
+
+## Extensions
+
+There are a few handy helper methods that we have added as extensions to the classes that use them. 
+
+### UIImage+GIF.swift
+
+Understanding this code is out of the scope of this tutorial! However, there are some great libraries you can add to your project that will handle this for you. For example, https://github.com/swiftgif/SwiftGif. In order to use this library, or a different one, you will need to follow instructions for setting up your project to use [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) or [Carthage](https://github.com/Carthage/Carthage). 
+
+### UIView+Constraints
+
+iOS has two systems for setting up layout rules: Frames and Autolayout. You can compare these two approaches [here](https://fluffy.es/frame-vs-autolayout/), but for storyboard-based apps you're going to be using Autolayout. 
+
+Autolayout relies on `NSLayoutConstraint`s. Each constraint is a rule for how the width, or height, or edge of one view should appear relative to another view. Since NSLayoutConstraints have to be setup individually, one for each edge or dimension of a view, it can be helpful to setup some methods that activate a group of commonly used constraints. 
+
+In our example, we've added an extension method to UIView called `func fill(_ view: UIView)`. Calling the method on a view will add the 4 constraints needed to pin its edges to those of the second view that is passed as an argument. 
+
+
+### UIViewController+Alerts
+
+Inline errors are great, but they take a lot more time to build, since you have to accomodate for hiding/showing them in your layout. The simplest way to display errors, or other quick information snippets to the user, is usually with the built-in UIAlertController that can be presented from any other View Controller. 
+
+This extension method gives us a quick way to display a simple error alert that can be dismissed from any of our view controllers. 
+
 # Additional Resources
 - Getting Started with Storyboards
 raywenderlich.com/ios-storyboards-getting-started 
@@ -112,7 +139,8 @@ https://developer.android.com/guide/topics/ui
 https://developer.apple.com/design/human-interface-guidelines 
 - Writing your API Network Client
 https://swiftbysundell.com/articles/creating-generic-networking-apis-in-swift/ 
-
+- Adding custom fonts to your project
+https://developer.apple.com/documentation/uikit/text_display_and_fonts/adding_a_custom_font_to_your_app
 
 # Designs
 [Figma Sample App Designs](https://www.figma.com/file/jzLY4lzbaxUSEVvcGLn9N5/HackHer-Starter-App?node-id=39%3A525)
