@@ -67,6 +67,17 @@ This app uses 3 custom [View Controller](https://learnappmaking.com/view-control
 
 ### SearchViewController.swift
 
+# Additional Resources
+- Getting Started with Storyboards
+raywenderlich.com/ios-storyboards-getting-started 
+https://developer.android.com/guide/topics/ui
+- Human Interface Design guidelines
+developer.apple.com/design/human-interface-guidelines 
+https://material.io/develop/android 
+- Writing your API Network Client
+swiftbysundell.com/articles/creating-generic-networking-apis-in-swift/ 
+
+
 # Designs
 [Figma Sample App Designs](https://www.figma.com/file/jzLY4lzbaxUSEVvcGLn9N5/HackHer-Starter-App?node-id=39%3A525)
 
