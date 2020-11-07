@@ -130,7 +130,7 @@ In our example, we've added an extension method to UIView called `func fill(_ vi
 
 Inline errors are great, but they take a lot more time to build, since you have to handle hiding/showing them in a view layout yourself. The simplest way to display errors, or other transient information snippets to the user, is often with the built-in UIAlertController that can be presented from any other View Controller. 
 
-
+![Simulator Screen Shot - iPhone 11 - 2020-11-07 at 10 49 56](https://user-images.githubusercontent.com/7647185/98445692-02b6ca00-20e7-11eb-88bd-6cf8fa4cf61d.png)
 
 This extension method gives us a quick way to display a simple error alert that can be dismissed from any of our view controllers. 
 
