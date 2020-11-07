@@ -119,16 +119,18 @@ Understanding this code is out of the scope of this tutorial! However, there are
 
 ### UIView+Constraints
 
-iOS has two systems for setting up layout rules: Frames and Autolayout. You can compare these two approaches [here](https://fluffy.es/frame-vs-autolayout/), but for storyboard-based apps you're going to be using Autolayout. 
+iOS has two systems for setting up layout rules: Frames and Auto Layout. You can compare these two approaches [here](https://fluffy.es/frame-vs-autolayout/), but for storyboard-based apps you're mostly going to be using Auto Layout. 
 
-Autolayout relies on `NSLayoutConstraint`s. Each constraint is a rule for how the width, or height, or edge of one view should appear relative to another view. Since NSLayoutConstraints have to be setup individually, one for each edge or dimension of a view, it can be helpful to setup some methods that activate a group of commonly used constraints. 
+Auto Layout relies on `NSLayoutConstraint`s. Each constraint is a rule for how the width, or height, or edge of one view should appear relative to another view. For width and height, you can also just use a constant to set a dimension (it doesn't have to be related to another view). Since NSLayoutConstraints have to be setup individually, one for each edge or dimension of a view, it can be helpful to create some helper methods that activate a group of commonly used constraints. 
 
 In our example, we've added an extension method to UIView called `func fill(_ view: UIView)`. Calling the method on a view will add the 4 constraints needed to pin its edges to those of the second view that is passed as an argument. 
 
 
 ### UIViewController+Alerts
 
-Inline errors are great, but they take a lot more time to build, since you have to accomodate for hiding/showing them in your layout. The simplest way to display errors, or other quick information snippets to the user, is usually with the built-in UIAlertController that can be presented from any other View Controller. 
+Inline errors are great, but they take a lot more time to build, since you have to handle hiding/showing them in a view layout yourself. The simplest way to display errors, or other transient information snippets to the user, is often with the built-in UIAlertController that can be presented from any other View Controller. 
+
+
 
 This extension method gives us a quick way to display a simple error alert that can be dismissed from any of our view controllers. 
 
