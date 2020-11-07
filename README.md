@@ -103,6 +103,7 @@ An important detail of how Table Views work on iOS is that they reuse cells. As 
 
 This makes loading images into a cell from a URL a bit trickier. We don't want to have to re-fetch the image every time the user scrolls down and the cell temporarily leaves the screen. This is why we've created a simple ImageCache class, that can store images we've already downloaded. Whenever a cell is about to load an image from a URL, it can first check if that image is already loaded in the ImageCache class. If so, it can avoid making an unnecessary url request. 
 
+## Views 
 
 ## Fonts
 This folder stores the custom font .ttf files we want to use in our app. These files can be dragged and dropped into your project (make sure you check 'Add to target NewsAppDemo in the dialog that pops up when you drop the files). The `Additional Resources` section has more information about how you can use these fonts in your storyboard views. 
