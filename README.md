@@ -1,5 +1,5 @@
 # ios-workshop
-This repository goes along with a 1 hour workshop on the topic of how to spend your time most effectively at a hackathon. Checkout the slides linked below.
+This repository goes along with a 1 hour workshop on the topic of how to spend your time most effectively at a hackathon. Checkout the slides found within the `workshop` folder within the repository. 
 
 
 This is an iOS sample app written in Swift.
