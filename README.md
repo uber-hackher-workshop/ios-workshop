@@ -49,13 +49,23 @@ These classes and several of their methods are provided to us by default when we
 
 ## Main.storyboard
 
-Here we have all our the various view controllers / screens and views that we want to use in our app. The first view controller to show will be the one with the entrypoint arrow. After that, we will see screen depending on which navigation actions the user taps. 
+Here we have all our the various view controllers / screens and views that we want to use in our app. The first view controller to show will be the one with the entrypoint arrow. 
 
 ![Screen Shot 2020-11-07 at 8 54 47 AM](https://user-images.githubusercontent.com/7647185/98443141-705afa00-20d7-11eb-8c35-dcb8f3e45ea4.png)
 
-Several of the storyboard screens are connected to a custom [View Controller](https://learnappmaking.com/view-controller-uiviewcontroller-ios-swift/) class
+Storyboards only contain navigation, layout and style information - but they are completely static. In order to load data into your views that is dynamic, like a feed of news articles, you need to attach certain views to a custom View Controller class that can handle this logic. 
 
-- FeedTableViewController
+You can connect a storyboard view controller to a custom class by opening the Inspector panel while the controller is selected, tapping the Identity Inspector icon, and adding the name of your custom controller class to the `Class` field. ![Screen Shot 2020-11-07 at 9 14 56 AM](https://user-images.githubusercontent.com/7647185/98443526-cfba0980-20d9-11eb-8cb4-cf61577377cb.png)
+
+## Controllers
+
+This app uses 3 custom [View Controller](https://learnappmaking.com/view-controller-uiviewcontroller-ios-swift/) classes to add load data in to the Search, Feed and ArticleDetail screens of the app: 
+
+### FeedTableViewController.swift
+
+### ArticleDetailViewController.swift
+
+### SearchViewController.swift
 
 # Designs
 [Figma Sample App Designs](https://www.figma.com/file/jzLY4lzbaxUSEVvcGLn9N5/HackHer-Starter-App?node-id=39%3A525)
