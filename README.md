@@ -63,14 +63,32 @@ You can connect a storyboard view controller to a custom class by opening the In
 
 This app uses 3 custom [View Controller](https://learnappmaking.com/view-controller-uiviewcontroller-ios-swift/) classes to add load data in to the Search, Feed and ArticleDetail screens of the app: 
 
+### SearchViewController.swift
+
+We've already set up this screen in Main.storyboard to have a search bar, a title label and a button. We've also added a navigation transition to the main Feed screen that will occur when the user taps the Go button. If we run the app without setting a custom class for this screen, everything will work as expected, EXCEPT that our FeedTableViewController won't know what search query was typed into the search bar on the previous screen. We need a custom class for SearchViewController to pass that information on to the next screen before the transition occurs. 
+
+The `SearchViewController` class is uses outlets to reference the search bar and Go button on the storyboard. We set up these outlets by CTRL + dragging from the view in the storyboard to the line of code in our custom class where we want the reference to go.  Once SearchViewController has references to these to the search bar, it can assign itself as the delegate of the search bar, so that it will be informed whenever the user returns from a search. We can then trigger the Go button when the user hits enter, the same as if it had been tapped. 
+
+This is the crucial code in SearchViewController, that intercepts the navigation to the FeedTableViewController, and passes along whatever search query the user had typed in.  
+```
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let feedController = segue.destination as? FeedTableViewController {
+            feedController.searchQuery = searchBar.text
+        }
+    }
+```
+
 ### FeedTableViewController.swift
 
-FeedTableViewController is attached to the storyboard view for our list of articles. The FeedTableViewController class is responsible for calling the `fetch` method provided by our NewsAPIClient, storing the results of this request (hopefully, an array of articles), and reloading its table view to use this data in its rows.
+FeedTableViewController is attached to the storyboard view for our list of articles. The FeedTableViewController class is responsible for calling the `fetch` method provided by our NewsAPIClient with the search query from the previous screen, storing the results of this request (hopefully, an array of articles), and reloading its table view to use this data in its rows.
+
+FeedTableViewController also handle's the event where a user taps on one of the table view rows. Our table view is already hooked up in the storyboard to transition to our Detail screen when the user taps on one of its rows. But before that transition happens, we need to figure out which article corresponds to the tapped row, and pass that article to the Detail screen's controller so it can populate its fields with the right information. 
 
 ### ArticleDetailViewController.swift
 
-### SearchViewController.swift
+We need a custom class for the Article Detail view so that we can populate the screen with information specific to a specific article. ArticleDetailViewController expects that it will be provided with the NewsArticle it needs by the time it loads. On viewDidLoad, this article is used to populate the various labels in the Detail screen. 
 
+We also use ArticleDetailViewController to handle the case where a user taps on the 'Read more' link, by getting the correct URL for the specific article, and opening it in the Safari app. 
 
 ## Services
 
