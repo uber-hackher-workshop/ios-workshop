@@ -29,7 +29,7 @@ Swift 5.3 (comes with Xcode 12)
 Apple Computer (Xcode only runs on Apple)
 
 # Overview
-<img src="ios-sample-app.gif" alt="sample App" width="350"/>
+<img src="workshop/ios-sample-app.gif" alt="sample App" width="350"/>
 
 Our app, NewsAppDemo, uses [NewsAPI](https://newsapi.org/docs) to load articles that match the user's search. 
 
