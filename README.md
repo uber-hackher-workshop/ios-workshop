@@ -57,6 +57,7 @@ Storyboards only contain navigation, layout and style information - but they are
 
 You can connect a storyboard view controller to a custom class by opening the Inspector panel while the controller is selected, tapping the Identity Inspector icon, and adding the name of your custom controller class to the `Class` field. ![Screen Shot 2020-11-07 at 9 14 56 AM](https://user-images.githubusercontent.com/7647185/98443526-cfba0980-20d9-11eb-8cb4-cf61577377cb.png)
 
+
 ## Controllers
 
 This app uses 3 custom [View Controller](https://learnappmaking.com/view-controller-uiviewcontroller-ios-swift/) classes to add load data in to the Search, Feed and ArticleDetail screens of the app: 
@@ -72,8 +73,7 @@ This app uses 3 custom [View Controller](https://learnappmaking.com/view-control
 raywenderlich.com/ios-storyboards-getting-started 
 https://developer.android.com/guide/topics/ui
 - Human Interface Design guidelines
-developer.apple.com/design/human-interface-guidelines 
-https://material.io/develop/android 
+https://developer.apple.com/design/human-interface-guidelines 
 - Writing your API Network Client
 swiftbysundell.com/articles/creating-generic-networking-apis-in-swift/ 
 
